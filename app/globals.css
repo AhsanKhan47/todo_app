@@ -1,9 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Sora+Sompeng&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-body{
-  background-color: rgb(51, 44, 66) ;
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #051937,
+    #103264,
+    #1d4d95,
+    #2b6bc8,
+    #3b89ff
+  );
   color: aliceblue;
-  
+}
+/* Glass effect */
+.cont {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.1px);
+  -webkit-backdrop-filter: blur(8.1px);
 }

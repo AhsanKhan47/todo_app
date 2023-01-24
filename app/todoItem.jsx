@@ -21,17 +21,24 @@ export default function TodoItem({ item }) {
   return (
     <div className="flex flex-row justify-between align-center  mb-10          ">
       <input
-        className=" w-[2rem] h-[4rem]  "
+        className=" w-[2rem] h-[2rem]
+         md:w-[2rem] md:h-[4rem]  
+          bg-sky-600 text-lg"
         type="checkbox"
         onChange={(e) => update(item.id, e.target.checked, router.refresh)}
         checked={item.isDone}
       />
 
-      <span className="text-2xl h-[2rem]  text-center my-auto">
+      <span
+        className="text-md h-[2rem]  text-center my-auto
+                   md:text-2xl md:h-[2rem]  md:text-center md:my-auto"
+      >
         {item.name}
       </span>
       <button
-        className=" bg-cyan-800 px-8 py-4 h-[4rem] transition rounded-md hover:bg-cyan-700 text-2xl"
+        className=" 
+        bg-red-400 px-2 h-[2rem] my-auto transition rounded-md hover:bg-red-500 text-md
+        md:bg-red-400 md:px-3 md:h-[3rem] md:my-auto md:transition md:rounded-md md:hover:bg-red-500 md:text-xl"
         onClick={() => deleteTodo(item.id, router.refresh)}
       >
         delete

@@ -1,7 +1,7 @@
 import TodoItem from "./todoItem";
-import AddTodo from "./add-todo";
+
 const todoList = async () => {
-  let res = await fetch("http://127.0.0.1:3001/api/todo/list");
+  let res = await fetch(`http://127.0.0.1:3001/api/todo/list`);
   return res.json();
 };
 
