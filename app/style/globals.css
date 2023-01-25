@@ -16,7 +16,8 @@ body {
 }
 /* Glass effect */
 .cont {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(127, 240, 255, 0.25);
+  /* background: rgba(127, 212, 255, 0.193); another bg to try */
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.1px);
@@ -28,4 +29,33 @@ body {
 }
 .notActive {
   display: none;
+}
+
+/* {form} */
+.bg {
+  background: rgba(0, 187, 255, 0.141);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.1px);
+  -webkit-backdrop-filter: blur(8.1px);
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+table tr {
+  padding: 8px;
+}
+table th {
+  width: 8rem;
+  text-align: start;
+}
+table tr:nth-child(odd) {
+  background: rgb(12, 109, 154);
+}
+
+table tr:nth-child(even) {
+  background: rgb(47, 159, 240);
 }
