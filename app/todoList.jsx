@@ -1,3 +1,4 @@
+import style from "./style/globals.css";
 import TodoItem from "./todoItem";
 
 const todoList = async () => {
@@ -7,6 +8,9 @@ const todoList = async () => {
 
 export default async function TodoList() {
   const { todos } = await todoList();
+  // let id = todos.map((i) => i.isDone);
+  // let finished = id;
+  // console.log(finished);
   // console.log(todos);
   return (
     <div>

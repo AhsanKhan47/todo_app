@@ -22,3 +22,10 @@ body {
   backdrop-filter: blur(8.1px);
   -webkit-backdrop-filter: blur(8.1px);
 }
+
+.active {
+  display: block;
+}
+.notActive {
+  display: none;
+}

@@ -8,6 +8,7 @@ async function update(id, isDone, refresh) {
   });
   refresh();
 }
+
 // Delete todo function
 async function deleteTodo(id, refresh) {
   await fetch(`/api/todo/delete?id=${id}`, {
@@ -18,31 +19,34 @@ async function deleteTodo(id, refresh) {
 
 export default function TodoItem({ item }) {
   let router = useRouter();
+
   return (
-    <div className="flex flex-row justify-between align-center  mb-10          ">
-      <input
-        className=" w-[2rem] h-[2rem]
+    <div>
+      <div className="flex flex-row justify-between align-center  mb-10          ">
+        <input
+          className=" w-[2rem] h-[2rem]
          md:w-[2rem] md:h-[4rem]  
           bg-sky-600 text-lg"
-        type="checkbox"
-        onChange={(e) => update(item.id, e.target.checked, router.refresh)}
-        checked={item.isDone}
-      />
+          type="checkbox"
+          onChange={(e) => update(item.id, e.target.checked, router.refresh)}
+          checked={item.isDone}
+        />
 
-      <span
-        className="text-md h-[2rem]  text-center my-auto
+        <span
+          className="text-md h-[2rem]  text-center my-auto
                    md:text-2xl md:h-[2rem]  md:text-center md:my-auto"
-      >
-        {item.name}
-      </span>
-      <button
-        className=" 
+        >
+          {item.name}
+        </span>
+        <button
+          className=" 
         bg-red-400 px-2 h-[2rem] my-auto transition rounded-md hover:bg-red-500 text-md
         md:bg-red-400 md:px-3 md:h-[3rem] md:my-auto md:transition md:rounded-md md:hover:bg-red-500 md:text-xl"
-        onClick={() => deleteTodo(item.id, router.refresh)}
-      >
-        delete
-      </button>
+          onClick={() => deleteTodo(item.id, router.refresh)}
+        >
+          delete
+        </button>
+      </div>
     </div>
   );
 }

@@ -13,6 +13,7 @@ async function addT(name, refresh) {
 export default function AddTodo() {
   const router = useRouter();
   let [name, setName] = useState("");
+
   return (
     <div
       className="flex flex-row gap-4 justify-center mb-10 w-10/12  mx-auto
